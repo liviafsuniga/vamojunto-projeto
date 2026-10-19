@@ -1,0 +1,524 @@
+  __   __                     _              _        
+  \ \ / /_ _ _ __ ___   ___  | |_   _ _ __ | |_ ___  
+   \ V / _` | '_ ` _ \ / _ \ | | | | | '_ \| __/ _ \ 
+    | | (_| | | | | | | (_) || | |_| | | | | || (_) |
+    |_|\__,_|_| |_| |_|\___/_/ |\__,_|_| |_|\__\___/ 
+                          |__/   Voce ja vai? Vamos juntos.
+
+   Conectado ao banco: MySQL 8.0.46-0ubuntu0.24.04.4 - usuario vamojunto_app@localhost
+
+============================================
+   VAMOJUNTO - Voce ja vai? Vamos juntos.
+============================================
+    1 - Entrar (login)
+    2 - Criar conta
+    3 - Buscar viagens disponiveis (sem login)
+    4 - Consultas e relatorios do banco
+    5 - Area do administrador
+    0 - Sair do sistema
+Opcao (0 a 5): 
+>> Buscar viagens disponiveis (sem login)
+Cidade de origem [Enter = todos]: Cidade de destino [Enter = todos]: Data (dd/mm/aaaa) [Enter = todos]: +------------+------------------+-------------+----------+------------+-----------------+-------------+
+| cod_viagem | saida            | motorista   | origem   | destino    | vagas_restantes | custo_total |
++------------+------------------+-------------+----------+------------+-----------------+-------------+
+| 2          | 04/11/2026 18:30 | Elisa Rocha | Sorocaba | Votorantim | 1               | R$ 5,42     |
+| 4          | 10/12/2026 07:00 | Ana Souza   | Sorocaba | Itu        | 4               | R$ 19,81    |
++------------+------------------+-------------+----------+------------+-----------------+-------------+
+2 registro(s).
+
+Pressione Enter para continuar...
+============================================
+   VAMOJUNTO - Voce ja vai? Vamos juntos.
+============================================
+    1 - Entrar (login)
+    2 - Criar conta
+    3 - Buscar viagens disponiveis (sem login)
+    4 - Consultas e relatorios do banco
+    5 - Area do administrador
+    0 - Sair do sistema
+Opcao (0 a 5): 
+>> Entrar (login)
+E-mail: Senha:    OK: Bem-vindo(a), Bruno Lima!
+
+========================================
+   Ola, Bruno Lima!
+========================================
+    1 - Area do passageiro
+    2 - Area do motorista
+    3 - Avaliar caronas
+    4 - Meu historico de viagens
+    5 - Detalhes e rota de uma viagem
+    6 - Meu perfil e reputacao
+    7 - Alterar telefone ou senha
+    0 - Sair da conta
+Opcao (0 a 7): 
+========================================
+   Area do passageiro
+========================================
+    1 - Buscar viagens disponiveis
+    2 - Encontrar carona para o meu trajeto (match)
+    3 - Pedir carona pelo codigo da viagem
+    4 - Minhas solicitacoes de carona
+    5 - Cancelar uma solicitacao
+    0 - Voltar
+Opcao (0 a 5): 
+>> Encontrar carona para o meu trajeto (match)
+   Dica: pode digitar o bairro, a rua ou so a cidade.
+Onde voce esta (embarque): Para onde voce vai: Data (dd/mm/aaaa) [Enter = todos]: +---+--------+------------------+-----------+------+---------------------------------------------+-----------------------------------+-------+-----------+-------+--------------+
+| # | viagem | saida            | motorista | nota | embarque                                    | destino                           | km    | voce paga | vagas | similaridade |
++---+--------+------------------+-----------+------+---------------------------------------------+-----------------------------------+-------+-----------+-------+--------------+
+| 1 | 4      | 10/12/2026 07:00 | Ana Souza | 4,50 | Rua XV de Novembro, 100 - Centro (Sorocaba) | Praça Padre Miguel - Centro (Itu) | 40,00 | R$ 9,91   | 4     | 2            |
++---+--------+------------------+-----------+------+---------------------------------------------+-----------------------------------+-------+-----------+-------+--------------+
+1 registro(s).
+Numero da opcao para pedir carona (0 = nenhuma) (0 a 1):    Viagem .................: 4 - Ana Souza
+   Saida ..................: 10/12/2026 07:00
+   Veiculo ................: Chevrolet Onix Prata - FTR4A21 (5 lugares)
+   Destino final ..........: Praça Padre Miguel, 50 - Centro (Itu)
+   Vagas restantes ........: 4
+   Embarque ...............: Rua XV de Novembro, 100 - Centro (Sorocaba)
+   Trecho estimado ........: 40,00 km de 40,00 km
+Usar essa distancia? (s/n):   ! Responda s ou n.
+Usar essa distancia? (s/n):    Custo total da viagem ..: R$ 19,81
+   Voce pagaria ...........: R$ 9,91 (diminui se entrarem mais passageiros)
+Enviar o pedido de carona? (s/n):    OK: Pedido 7 enviado! Agora e so aguardar o motorista aceitar.
+
+Pressione Enter para continuar...
+========================================
+   Area do passageiro
+========================================
+    1 - Buscar viagens disponiveis
+    2 - Encontrar carona para o meu trajeto (match)
+    3 - Pedir carona pelo codigo da viagem
+    4 - Minhas solicitacoes de carona
+    5 - Cancelar uma solicitacao
+    0 - Voltar
+Opcao (0 a 5): 
+>> Minhas solicitacoes de carona
++--------+--------+------------------+-------------+-----------------------------------------------+----------+-------+---------------+---------------+---------+
+| pedido | viagem | saida            | motorista   | embarque                                      | destino  | km    | status_pedido | status_viagem | valor   |
++--------+--------+------------------+-------------+-----------------------------------------------+----------+-------+---------------+---------------+---------+
+| 7      | 4      | 10/12/2026 07:00 | Ana Souza   | Rua XV de Novembro, 100 - Centro (Sorocaba)   | Itu      | 40,00 | PENDENTE      | Agendada      | -       |
+| 1      | 1      | 13/10/2026 07:00 | Ana Souza   | Rua XV de Novembro, 100 - Centro (Sorocaba)   | Sorocaba | 18,00 | ACEITA        | Concluida     | R$ 3,10 |
+| 5      | 3      | 06/10/2026 07:15 | Elisa Rocha | Av. Gisele Constantino, 1500 - Parque Bela... | Sorocaba | 25,00 | ACEITA        | Concluida     | R$ 3,58 |
++--------+--------+------------------+-------------+-----------------------------------------------+----------+-------+---------------+---------------+---------+
+3 registro(s).
+
+Pressione Enter para continuar...
+========================================
+   Area do passageiro
+========================================
+    1 - Buscar viagens disponiveis
+    2 - Encontrar carona para o meu trajeto (match)
+    3 - Pedir carona pelo codigo da viagem
+    4 - Minhas solicitacoes de carona
+    5 - Cancelar uma solicitacao
+    0 - Voltar
+Opcao (0 a 5): 
+========================================
+   Ola, Bruno Lima!
+========================================
+    1 - Area do passageiro
+    2 - Area do motorista
+    3 - Avaliar caronas
+    4 - Meu historico de viagens
+    5 - Detalhes e rota de uma viagem
+    6 - Meu perfil e reputacao
+    7 - Alterar telefone ou senha
+    0 - Sair da conta
+Opcao (0 a 7):    Voce saiu da sua conta.
+
+Pressione Enter para continuar...
+============================================
+   VAMOJUNTO - Voce ja vai? Vamos juntos.
+============================================
+    1 - Entrar (login)
+    2 - Criar conta
+    3 - Buscar viagens disponiveis (sem login)
+    4 - Consultas e relatorios do banco
+    5 - Area do administrador
+    0 - Sair do sistema
+Opcao (0 a 5): 
+>> Entrar (login)
+E-mail: Senha:    OK: Bem-vindo(a), Ana Souza!
+
+========================================
+   Ola, Ana Souza!
+========================================
+    1 - Area do passageiro
+    2 - Area do motorista
+    3 - Avaliar caronas
+    4 - Meu historico de viagens
+    5 - Detalhes e rota de uma viagem
+    6 - Meu perfil e reputacao
+    7 - Alterar telefone ou senha
+    0 - Sair da conta
+Opcao (0 a 7): 
+========================================
+   Area do motorista
+========================================
+    1 - Quero ser motorista (cadastrar CNH)
+    2 - Cadastrar veiculo
+    3 - Oferecer viagem (rota com paradas)
+    4 - Minhas viagens como motorista
+    5 - Pedidos de carona recebidos (aceitar/recusar)
+    6 - Gerenciar uma viagem (passageiros, parada, iniciar, concluir, cancelar)
+    0 - Voltar
+Opcao (0 a 6): 
+>> Pedidos de carona recebidos (aceitar/recusar)
++--------+--------+------------------+------------+------+---------------------------------------------+-------+
+| pedido | viagem | saida            | passageiro | nota | embarque                                    | km    |
++--------+--------+------------------+------------+------+---------------------------------------------+-------+
+| 7      | 4      | 10/12/2026 07:00 | Bruno Lima | 5,00 | Rua XV de Novembro, 100 - Centro (Sorocaba) | 40,00 |
++--------+--------+------------------+------------+------+---------------------------------------------+-------+
+1 registro(s).
+Codigo do pedido para responder (0 = voltar): Aceitar (A) ou recusar (R) (A/R):    OK: Pedido 7 aceito.
+   Rateio atualizado da viagem 4:
++-----------------+------------+-------------+------------------------+-----------+--------+---------+
+| cod_solicitacao | passageiro | instituicao | ponto_embarque         | trecho_km | status | rateio  |
++-----------------+------------+-------------+------------------------+-----------+--------+---------+
+| 7               | Bruno Lima | FATEC       | 1 - Rua XV de Novembro | 40,00     | ACEITA | R$ 9,91 |
++-----------------+------------+-------------+------------------------+-----------+--------+---------+
+1 registro(s).
+   Nenhum pedido aguardando resposta.
+
+Pressione Enter para continuar...
+========================================
+   Area do motorista
+========================================
+    1 - Quero ser motorista (cadastrar CNH)
+    2 - Cadastrar veiculo
+    3 - Oferecer viagem (rota com paradas)
+    4 - Minhas viagens como motorista
+    5 - Pedidos de carona recebidos (aceitar/recusar)
+    6 - Gerenciar uma viagem (passageiros, parada, iniciar, concluir, cancelar)
+    0 - Voltar
+Opcao (0 a 6):   ! Digite um numero inteiro.
+Opcao (0 a 6): 
+>> Oferecer viagem (rota com paradas)
++--------+----------------+--------+---------+---------+
+| codigo | veiculo        | cor    | placa   | lugares |
++--------+----------------+--------+---------+---------+
+| 1      | Chevrolet Onix | Prata  | FTR4A21 | 5       |
+| 2      | Fiat Mobi      | Branco | DKS1234 | 4       |
++--------+----------------+--------+---------+---------+
+2 registro(s).
+Codigo do veiculo (0 = cadastrar um novo):    1 - GASOLINA - R$ 6,19/litro
+   2 - ETANOL - R$ 4,29/litro
+   3 - DIESEL - R$ 6,05/litro
+Codigo do combustivel: Saida (dd/mm/aaaa hh:mm) [Enter = agora]: Vagas para passageiros (1 a 4): Distancia total da rota em km: Consumo do carro em km/l:    
+   Agora a rota: ORIGEM -> paradas (opcional) -> DESTINO
+   -- ORIGEM --
+Rua / avenida: Numero [Enter = pular]: Bairro [Enter = pular]: Cidade: UF [Enter = SP]: CEP [Enter = pular]: Latitude (ex.: -23,5015) [Enter = pular]: Longitude (ex.: -47,4581): Adicionar uma parada no caminho? (s/n):    -- PARADA --
+Rua / avenida: Numero [Enter = pular]: Bairro [Enter = pular]: Cidade: UF [Enter = SP]: CEP [Enter = pular]: Latitude (ex.: -23,5015) [Enter = pular]: Adicionar uma parada no caminho? (s/n):    -- DESTINO --
+Rua / avenida: Numero [Enter = pular]: Bairro [Enter = pular]: Cidade: UF [Enter = SP]: CEP [Enter = pular]: Latitude (ex.: -23,5015) [Enter = pular]: 
+>> Resumo da viagem
+   Veiculo ................: Chevrolet Onix Prata - FTR4A21 (5 lugares)
+   Combustivel ............: ETANOL - R$ 4,29/litro
+   Saida ..................: 17/10/2026 14:13
+   Vagas ..................: 3
+     1. ORIGEM ............: Av. Itavuvu, 1000 - Jardim Santa Cecilia (Sorocaba)
+     2. PARADA ............: Rua Professor Toledo, 200 - Centro (Sorocaba)
+     3. DESTINO ...........: Av. Dr. Armando Pannunzio, 1500 - Jardim Vera Cruz (Sorocaba)
+   Custo do combustivel ...: R$ 9,75 = 25 km / 11 km/l x R$ 4,29
+   Com o carro cheio ......: cada passageiro da viagem toda paga R$ 2,44 e voce tambem
+Publicar a viagem? (s/n):    OK: Viagem 6 publicada! Custo calculado pelo banco: R$ 9,75
+
+Pressione Enter para continuar...
+========================================
+   Area do motorista
+========================================
+    1 - Quero ser motorista (cadastrar CNH)
+    2 - Cadastrar veiculo
+    3 - Oferecer viagem (rota com paradas)
+    4 - Minhas viagens como motorista
+    5 - Pedidos de carona recebidos (aceitar/recusar)
+    6 - Gerenciar uma viagem (passageiros, parada, iniciar, concluir, cancelar)
+    0 - Voltar
+Opcao (0 a 6): 
+>> Gerenciar uma viagem (passageiros, parada, iniciar, concluir, cancelar)
++--------+-----------+------------------+----------+----------+---------+-------------+----------+
+| viagem | status    | saida            | origem   | destino  | paradas | passageiros | custo    |
++--------+-----------+------------------+----------+----------+---------+-------------+----------+
+| 4      | Agendada  | 10/12/2026 07:00 | Sorocaba | Itu      | 0       | 1/4         | R$ 19,81 |
+| 5      | Cancelada | 20/10/2026 18:00 | Sorocaba | Sorocaba | 0       | 0/2         | R$ 5,16  |
+| 6      | Agendada  | 17/10/2026 14:13 | Sorocaba | Sorocaba | 1       | 0/3         | R$ 9,75  |
+| 1      | Concluida | 13/10/2026 07:00 | Sorocaba | Sorocaba | 1       | 2/3         | R$ 9,29  |
++--------+-----------+------------------+----------+----------+---------+-------------+----------+
+4 registro(s).
+Codigo da viagem (0 = voltar):    Viagem 6: Agendada, 0 passageiro(s) aceito(s).
+
+========================================
+   Gerenciar viagem 6
+========================================
+    1 - Ver passageiros e rateio
+    2 - Ver rota
+    3 - Adicionar parada antes do destino
+    4 - Iniciar viagem (pedidos pendentes sao recusados)
+    5 - Concluir viagem (libera as avaliacoes)
+    6 - Cancelar viagem (cancela todos os pedidos)
+    0 - Voltar
+Opcao (0 a 6): 
+>> Iniciar viagem (pedidos pendentes sao recusados)
+Iniciar a viagem 6 agora? (s/n):    OK: Viagem em andamento. Boa viagem!
+
+Pressione Enter para continuar...
+========================================
+   Gerenciar viagem 6
+========================================
+    1 - Ver passageiros e rateio
+    2 - Ver rota
+    3 - Adicionar parada antes do destino
+    4 - Iniciar viagem (pedidos pendentes sao recusados)
+    5 - Concluir viagem (libera as avaliacoes)
+    6 - Cancelar viagem (cancela todos os pedidos)
+    0 - Voltar
+Opcao (0 a 6): 
+>> Concluir viagem (libera as avaliacoes)
+Concluir a viagem 6? (s/n):    OK: Viagem concluida. Voce e os passageiros ja podem se avaliar.
+
+Pressione Enter para continuar...
+========================================
+   Gerenciar viagem 6
+========================================
+    1 - Ver passageiros e rateio
+    2 - Ver rota
+    3 - Adicionar parada antes do destino
+    4 - Iniciar viagem (pedidos pendentes sao recusados)
+    5 - Concluir viagem (libera as avaliacoes)
+    6 - Cancelar viagem (cancela todos os pedidos)
+    0 - Voltar
+Opcao (0 a 6): 
+Pressione Enter para continuar...
+========================================
+   Area do motorista
+========================================
+    1 - Quero ser motorista (cadastrar CNH)
+    2 - Cadastrar veiculo
+    3 - Oferecer viagem (rota com paradas)
+    4 - Minhas viagens como motorista
+    5 - Pedidos de carona recebidos (aceitar/recusar)
+    6 - Gerenciar uma viagem (passageiros, parada, iniciar, concluir, cancelar)
+    0 - Voltar
+Opcao (0 a 6): 
+========================================
+   Ola, Ana Souza!
+========================================
+    1 - Area do passageiro
+    2 - Area do motorista
+    3 - Avaliar caronas
+    4 - Meu historico de viagens
+    5 - Detalhes e rota de uma viagem
+    6 - Meu perfil e reputacao
+    7 - Alterar telefone ou senha
+    0 - Sair da conta
+Opcao (0 a 7): 
+>> Avaliar caronas
++---+--------+------------------+-----------+--------------+
+| # | viagem | data             | voce foi  | avaliar      |
++---+--------+------------------+-----------+--------------+
+| 1 | 1      | 13/10/2026 07:00 | motorista | Carla Mendes |
++---+--------+------------------+-----------+--------------+
+1 registro(s).
+Qual deseja avaliar (0 = voltar) (0 a 1): Nota para Carla Mendes (1 a 5): Comentario [Enter = pular]:    OK: Avaliacao registrada: ***** (5/5). Obrigado!
+
+Pressione Enter para continuar...
+========================================
+   Ola, Ana Souza!
+========================================
+    1 - Area do passageiro
+    2 - Area do motorista
+    3 - Avaliar caronas
+    4 - Meu historico de viagens
+    5 - Detalhes e rota de uma viagem
+    6 - Meu perfil e reputacao
+    7 - Alterar telefone ou senha
+    0 - Sair da conta
+Opcao (0 a 7): 
+>> Meu perfil e reputacao
+   Nome ...................: Ana Souza
+   E-mail .................: ana.souza@uniso.br
+   CPF ....................: 111.***.***-44
+   Telefone ...............: 15991110001
+   Idade ..................: 23 anos
+   Instituicao ............: UNISO - Universidade de Sorocaba (Sorocaba/SP)
+   Conta verificada .......: Sim
+   Perfil .................: MOTORISTA
+   Membro desde ...........: 17/10/2026 14:13
+   Nota como passageiro ...: sem avaliacoes
+   Caronas concluidas .....: 0
+   Total pago em caronas ..: R$ 0,00
+   CNH ....................: *******7890 - categoria B
+   Validade da CNH ........: 10/05/2030
+   Nota como motorista ....: 4,50 / 5
+   Viagens concluidas .....: 2
+
+Pressione Enter para continuar...
+========================================
+   Ola, Ana Souza!
+========================================
+    1 - Area do passageiro
+    2 - Area do motorista
+    3 - Avaliar caronas
+    4 - Meu historico de viagens
+    5 - Detalhes e rota de uma viagem
+    6 - Meu perfil e reputacao
+    7 - Alterar telefone ou senha
+    0 - Sair da conta
+Opcao (0 a 7):    Voce saiu da sua conta.
+
+Pressione Enter para continuar...
+============================================
+   VAMOJUNTO - Voce ja vai? Vamos juntos.
+============================================
+    1 - Entrar (login)
+    2 - Criar conta
+    3 - Buscar viagens disponiveis (sem login)
+    4 - Consultas e relatorios do banco
+    5 - Area do administrador
+    0 - Sair do sistema
+Opcao (0 a 5): 
+========================================
+   Consultas e relatorios do banco
+========================================
+    1 - Buscar viagens disponiveis
+    2 - Buscar usuarios (CPF mascarado)
+    3 - Detalhes de uma viagem
+    4 - Rota de uma viagem
+    5 - Passageiros de uma viagem
+    6 - Historico de um usuario
+    7 - Usuarios que ainda nao pegaram carona
+    8 - Viagens com custo acima da media
+    9 - Ranking de motoristas
+   10 - Relatorio mensal
+   11 - Resumo por instituicao
+   12 - Passageiros que mais usam o app
+   13 - Estatisticas gerais
+   14 - Todas as caronas (view vw_caronas)
+   15 - Responder pedido de carona
+   16 - Cancelar pedido de carona
+    0 - Voltar
+Opcao (0 a 16): 
+>> Estatisticas gerais
++-----------------+-------------------+-------------------+--------------------+-----------------+----------------+------------------+
+| usuarios_ativos | motoristas_ativos | viagens_agendadas | viagens_concluidas | caronas_aceitas | custo_dividido | media_avaliacoes |
++-----------------+-------------------+-------------------+--------------------+-----------------+----------------+------------------+
+| 6               | 2                 | 2                 | 3                  | 6               | R$ 29,77       | 4,86             |
++-----------------+-------------------+-------------------+--------------------+-----------------+----------------+------------------+
+1 registro(s).
+
+Pressione Enter para continuar...
+========================================
+   Consultas e relatorios do banco
+========================================
+    1 - Buscar viagens disponiveis
+    2 - Buscar usuarios (CPF mascarado)
+    3 - Detalhes de uma viagem
+    4 - Rota de uma viagem
+    5 - Passageiros de uma viagem
+    6 - Historico de um usuario
+    7 - Usuarios que ainda nao pegaram carona
+    8 - Viagens com custo acima da media
+    9 - Ranking de motoristas
+   10 - Relatorio mensal
+   11 - Resumo por instituicao
+   12 - Passageiros que mais usam o app
+   13 - Estatisticas gerais
+   14 - Todas as caronas (view vw_caronas)
+   15 - Responder pedido de carona
+   16 - Cancelar pedido de carona
+    0 - Voltar
+Opcao (0 a 16): 
+>> Ranking de motoristas
+Minimo de avaliacoes [Enter = todos]: +-------------+--------------------+------------+-------+------------+------------+
+| motorista   | viagens_concluidas | avaliacoes | media | menor_nota | maior_nota |
++-------------+--------------------+------------+-------+------------+------------+
+| Elisa Rocha | 1                  | 2          | 5,00  | 5          | 5          |
+| Ana Souza   | 2                  | 2          | 4,50  | 4          | 5          |
++-------------+--------------------+------------+-------+------------+------------+
+2 registro(s).
+
+Pressione Enter para continuar...
+========================================
+   Consultas e relatorios do banco
+========================================
+    1 - Buscar viagens disponiveis
+    2 - Buscar usuarios (CPF mascarado)
+    3 - Detalhes de uma viagem
+    4 - Rota de uma viagem
+    5 - Passageiros de uma viagem
+    6 - Historico de um usuario
+    7 - Usuarios que ainda nao pegaram carona
+    8 - Viagens com custo acima da media
+    9 - Ranking de motoristas
+   10 - Relatorio mensal
+   11 - Resumo por instituicao
+   12 - Passageiros que mais usam o app
+   13 - Estatisticas gerais
+   14 - Todas as caronas (view vw_caronas)
+   15 - Responder pedido de carona
+   16 - Cancelar pedido de carona
+    0 - Voltar
+Opcao (0 a 16): 
+============================================
+   VAMOJUNTO - Voce ja vai? Vamos juntos.
+============================================
+    1 - Entrar (login)
+    2 - Criar conta
+    3 - Buscar viagens disponiveis (sem login)
+    4 - Consultas e relatorios do banco
+    5 - Area do administrador
+    0 - Sair do sistema
+Opcao (0 a 5): 
+>> Area do administrador
+Senha do administrador: 
+========================================
+   Area do administrador
+========================================
+    1 - Listar usuarios (view sem senha e com CPF mascarado)
+    2 - Verificar conta de usuario
+    3 - Ativar ou desativar usuario
+    4 - Cadastrar instituicao de ensino
+    5 - Atualizar preco do combustivel
+    6 - Listar veiculos
+    7 - Reputacao dos motoristas (view)
+    8 - Viagens com vaga (view)
+    9 - Informacoes da conexao
+    0 - Voltar
+Opcao (0 a 9): 
+>> Verificar conta de usuario
++-------------+-------------+-----------------------+----------------+-------------+------------------+
+| cod_usuario | nome        | email                 | cpf_mascarado  | instituicao | dt_cadastro      |
++-------------+-------------+-----------------------+----------------+-------------+------------------+
+| 4           | Diego Alves | diego.alves@ufscar.br | 444.***.***-77 | UFSCar      | 17/10/2026 14:13 |
++-------------+-------------+-----------------------+----------------+-------------+------------------+
+1 registro(s).
+Codigo do usuario a verificar (0 = voltar):    OK: Conta verificada. O usuario ja pode se cadastrar como motorista.
+
+Pressione Enter para continuar...
+========================================
+   Area do administrador
+========================================
+    1 - Listar usuarios (view sem senha e com CPF mascarado)
+    2 - Verificar conta de usuario
+    3 - Ativar ou desativar usuario
+    4 - Cadastrar instituicao de ensino
+    5 - Atualizar preco do combustivel
+    6 - Listar veiculos
+    7 - Reputacao dos motoristas (view)
+    8 - Viagens com vaga (view)
+    9 - Informacoes da conexao
+    0 - Voltar
+Opcao (0 a 9): 
+Pressione Enter para continuar...
+============================================
+   VAMOJUNTO - Voce ja vai? Vamos juntos.
+============================================
+    1 - Entrar (login)
+    2 - Criar conta
+    3 - Buscar viagens disponiveis (sem login)
+    4 - Consultas e relatorios do banco
+    5 - Area do administrador
+    0 - Sair do sistema
+Opcao (0 a 5): 
+   Obrigado por usar o VamoJunto. Ate a proxima!
+Picked up JAVA_TOOL_OPTIONS: 

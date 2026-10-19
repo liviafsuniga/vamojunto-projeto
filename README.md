@@ -115,29 +115,5 @@ Requisitos não funcionais: senha só como hash SHA-256 (`Seguranca`), CPF sempr
 | Qualidade e testes | 21 testes JUnit (`src/test`): custo e rateio com os números da documentação, regras de rota, 18 anos, hash, transições de status, validações e as estratégias de ordenação |
 | Manutenção e gerência de configuração | projeto Maven com versões fixas, script do banco reexecutável, `.gitignore` |
 
-## O que mudou no banco (versão 2)
 
-O script parte do `vamojunto.sql` documentado e mantém todas as tabelas, regras e os dados de exemplo. Mudanças:
 
-1. **Senhas de exemplo** com hash real: `SHA2('vamo123', 256)` no lugar de `'$2b$12$hash…'`, para o login do console funcionar.
-2. **Correção em `sp_responder_solicitacao`**: agora só responde pedido **PENDENTE**. Antes, responder `ACEITA` num pedido já aceito passava sem erro (a trigger só confere quando o status muda) e alterava a `dt_resposta`.
-3. **Objetos novos** (seção "EXTENSÕES" do script):
-   - `fn_distancia_km` (Haversine), `fn_trecho_estimado` (km do ponto de embarque até o destino), `fn_media_avaliacao_passageiro`;
-   - `sp_match_rotas` (RF06), `sp_avaliacoes_pendentes` (RF11), `sp_iniciar_viagem`, `sp_concluir_viagem`, `sp_cancelar_viagem` (com transação e conferindo se a viagem é do motorista).
-
-Totais: 9 tabelas · 10 FKs · 39 CHECK · 11 triggers · **11 functions · 21 procedures** · 5 views · 2 usuários de banco.
-
-## Testes realizados
-
-- Script executado várias vezes seguidas, sem erros, no **MySQL 8.0.46** (com binlog ligado, como no Workbench; também sem avisos) e no **MariaDB 10.11.14**.
-- **21/21** testes JUnit aprovados.
-- Console testado de ponta a ponta nos dois servidores, conectado como `vamojunto_app`, com quatro roteiros: visitante, cadastro com entradas inválidas (nome curto, CPF errado, e-mail repetido, 31/02, menor de 18, senha curta e diferente), login, match e pedido de carona, aceite com recálculo do rateio, viagem lotada (o banco recusa e desfaz), pedido já respondido, oferta de viagem com parada, inclusão de parada depois, iniciar/concluir/cancelar viagem, avaliação, verificação de conta e desativação pelo administrador, atualização de preço (viagens antigas mantêm o preço congelado) e as 16 opções do menu de consultas, uma por uma.
-- Privilégios conferidos: `vamojunto_app` não consegue `DELETE`; `vamojunto_leitura` só lê as views e não executa procedures.
-
-Observação: nesta máquina de teste o Maven Central estava bloqueado, então o console foi executado com o driver MariaDB Connector/J (que aceita a URL `jdbc:mysql:`). O código usa apenas JDBC padrão; no NetBeans o Maven usa o `mysql-connector-j` 8.4.0 declarado no `pom.xml`.
-
-## Pontos para atualizar na documentação
-
-- Seção 8.11 / Tabela 5 e C4 níveis 2 e 3: o console agora tem login e menus por perfil (Visitante, Passageiro, Motorista, Administrador). O submenu "Consultas e relatórios" mantém as 16 opções documentadas.
-- Contagem de objetos do banco: 11 functions e 21 procedures (eram 8 e 16).
-- Seção 8.12 (testes e correções): incluir a correção do `sp_responder_solicitacao` e os testes JUnit.
